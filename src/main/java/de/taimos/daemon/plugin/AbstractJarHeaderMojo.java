@@ -28,6 +28,9 @@ public abstract class AbstractJarHeaderMojo extends AbstractMojo {
 	@Override
 	public void execute() throws MojoExecutionException, MojoFailureException {
 		File artifactFile = new File(this.artifact);
+		if (!artifactFile.exists()) {
+			throw new MojoExecutionException("artifact does not exist: " + this.artifact);
+		}
 		File artifactTmpFile = new File(this.artifact + ".tmp");
 		
 		try (FileOutputStream fos = new FileOutputStream(artifactTmpFile); FileInputStream fis = new FileInputStream(artifactFile)) {
