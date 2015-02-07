@@ -31,6 +31,12 @@ public class DaemonMojo extends AbstractJarHeaderMojo {
 	@Parameter(defaultValue = "256m", property = "maxMem", required = true)
 	private String maxMem;
 	
+	/**
+	 * jar file name
+	 */
+	@Parameter(defaultValue = "${project.build.finalName}", property = "jarFile", required = true)
+	private String jarFile;
+	
 	
 	@Override
 	protected String getCommand() {

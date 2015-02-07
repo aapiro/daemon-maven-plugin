@@ -18,12 +18,6 @@ public abstract class AbstractJarHeaderMojo extends AbstractMojo {
 	@Parameter(defaultValue = "${project.build.directory}/${project.build.finalName}.jar", property = "artifact", required = true)
 	protected String artifact;
 	
-	/**
-	 * jar file name
-	 */
-	@Parameter(defaultValue = "${project.build.finalName}", property = "jarFile", required = true)
-	protected String jarFile;
-	
 	
 	@Override
 	public void execute() throws MojoExecutionException, MojoFailureException {
