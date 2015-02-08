@@ -1,5 +1,7 @@
 # Daemon Plugin for Maven
 
+[![Build Status](https://travis-ci.org/taimos/daemon-maven-plugin.png?branch=master)](https://travis-ci.org/taimos/daemon-maven-plugin)
+
 Writes bash script headers to jar files to make them executable  
 
 ```
