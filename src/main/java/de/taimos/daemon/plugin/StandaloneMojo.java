@@ -8,7 +8,7 @@ public class StandaloneMojo extends AbstractJarHeaderMojo {
 	
 	@Override
 	protected String getCommand() {
-		return "java -jar \"$0\" \"$@\"";
+		return "java -Djava.net.preferIPv4Stack=true -jar \"$0\" \"$@\"";
 	}
 	
 }
