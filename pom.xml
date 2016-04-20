@@ -7,7 +7,7 @@
 	</parent>
 	<packaging>maven-plugin</packaging>
 	<artifactId>daemon-maven-plugin</artifactId>
-	<version>0.3-SNAPSHOT</version>
+	<version>1.0-SNAPSHOT</version>
 	<name>Maven plugin for daemon framework</name>
 	<inceptionYear>2015</inceptionYear>
 	<scm>
