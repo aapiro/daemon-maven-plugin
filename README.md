@@ -9,7 +9,7 @@ Writes bash script headers to jar files to make them executable
 	<plugin>
 		<groupId>de.taimos</groupId>
 		<artifactId>daemon-maven-plugin</artifactId>
-		<version>0.1-SNAPSHOT</version>
+		<version>1.0</version>
 		<configuration>
 		</configuration>
 	</plugin>
@@ -24,9 +24,11 @@ writes the following command to the header ``"java -jar "$0" "$@"``
 
 ### daemon
 
+!! For this to work you have to use at least JDK 7u101 or 8u92 !!
+
 writes the following command to the header
 
-``java -cp '<jarFile>.jar:lib/*' -Xmx<maxMem> -XX:OnOutOfMemoryError='kill -9 %p' -DstartupMode=<startupMode> <javaOpts> <mainClass> "$@"``
+``java -cp '<jarFile>.jar:lib/*' -Xmx<maxMem> -XX:ExitOnOutOfMemory -DstartupMode=<startupMode> <javaOpts> <mainClass> "$@"``
 
 ``javaOpts`` defaults to empty string
 
