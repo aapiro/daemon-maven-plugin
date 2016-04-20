@@ -62,7 +62,7 @@ public class DaemonMojo extends AbstractJarHeaderMojo {
 	protected String getCommand() {
 		String opts = this.javaOpts != null ? this.javaOpts : "";
 		
-		return String.format("exec java -cp '%s.jar:lib/*' -Xmx%s -XX:OnOutOfMemoryError='kill -9 %%p' -DstartupMode=%s -Djava.net.preferIPv4Stack=true %s %s \"$@\"", this.jarFile, this.maxMem, this.startupMode, opts, this.mainClass);
+		return String.format("exec java -cp '%s.jar:lib/*' -Xmx%s -XX:ExitOnOutOfMemory -DstartupMode=%s -Djava.net.preferIPv4Stack=true %s %s \"$@\"", this.jarFile, this.maxMem, this.startupMode, opts, this.mainClass);
 	}
 	
 }
