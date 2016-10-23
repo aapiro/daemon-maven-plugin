@@ -57,7 +57,6 @@ public class DaemonMojo extends AbstractJarHeaderMojo {
 	@Parameter(defaultValue = "${project.build.finalName}", property = "jarFile", required = true)
 	private String jarFile;
 	
-	
 	@Override
 	protected String getCommand() {
 		String opts = this.javaOpts != null ? this.javaOpts : "";

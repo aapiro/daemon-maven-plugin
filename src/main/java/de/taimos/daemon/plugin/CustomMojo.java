@@ -33,7 +33,6 @@ public class CustomMojo extends AbstractJarHeaderMojo {
 	@Parameter(property = "command", required = true)
 	private String command;
 	
-	
 	@Override
 	protected String getCommand() {
 		return this.command;
